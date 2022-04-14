@@ -68,7 +68,7 @@ class Config(config.Config):
     Orange application configuration
     """
     OrganizationDomain = "biolab.si"
-    ApplicationName = "Orange"
+    ApplicationName = "Spider Analytics"
     ApplicationVersion = Orange.__version__
     AppUserModelID = "Biolab.Orange"  # AppUserModelID for windows task bar
 
@@ -99,7 +99,7 @@ class Config(config.Config):
         Return the main application icon.
         """
         path = pkg_resources.resource_filename(
-            __name__, "icons/orange-256.png"
+            __name__, "icons/icon-48"
         )
         return QIcon(path)
 
@@ -107,7 +107,7 @@ class Config(config.Config):
     def splash_screen():
         splash_n = random.randint(1, 3)
         path = pkg_resources.resource_filename(
-            __name__, f"icons/orange-splash-screen-{splash_n:02}.png")
+            __name__, f"icons/spider-splash-screen-{splash_n:02}.png")
         pm = QPixmap(path)
 
         version = Config.ApplicationVersion
